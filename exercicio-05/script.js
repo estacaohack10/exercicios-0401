@@ -54,3 +54,20 @@ const alunos = [
     },
 ];
 const media = 6;
+
+for (const aluno of alunos) {
+    let mediaDoAluno = 0;
+
+  for (const nota of aluno.notas) {
+    mediaDoAluno += nota;
+  }  
+
+  mediaDoAluno = mediaDoAluno / aluno.notas.length;
+
+  if (mediaDoAluno >= media) {
+    console.log(`${aluno.nome} foi aprovado com média ${mediaDoAluno}. Parabéns!`);
+  }
+  else {
+    console.log(`${aluno.nome} foi reprovado com média ${mediaDoAluno}.`);
+  }
+}
